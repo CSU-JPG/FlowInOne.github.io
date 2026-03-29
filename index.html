@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="FlowInOne: Unifying Multimodal Generation as Image-in, Image-out Flow Matching">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="Junchao Yi, Rui Zhao, Jiahao Tang, Weixian Lei, Linjie Li, Qisheng Su, Zhengyuan Yang, Lijuan Wang, Xiaofeng Zhu, Alex Jinpeng Wang">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="FlowInOne: Unifying Multimodal Generation as Image-in, Image-out Flow Matching">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlowInOne: Unifying Multimodal Generation as Image-in, Image-out Flow Matching — Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Junchao Yi">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="FlowInOne: Unifying Multimodal Generation as Image-in, Image-out Flow Matching">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="FlowInOne: Unifying Multimodal Generation as Image-in, Image-out Flow Matching — Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="FlowInOne: Unifying Multimodal Generation as Image-in, Image-out Flow Matching">
+  <meta name="citation_author" content="Yi, Junchao">
+  <meta name="citation_author" content="Zhao, Rui">
+  <meta name="citation_author" content="Tang, Jiahao">
+  <meta name="citation_author" content="Lei, Weixian">
+  <meta name="citation_author" content="Li, Linjie">
+  <meta name="citation_author" content="Su, Qisheng">
+  <meta name="citation_author" content="Yang, Zhengyuan">
+  <meta name="citation_author" content="Wang, Lijuan">
+  <meta name="citation_author" content="Zhu, Xiaofeng">
+  <meta name="citation_author" content="Wang, Alex Jinpeng">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>FlowInOne: Unifying Multimodal Generation as Image-in, Image-out Flow Matching | Academic Research</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/icon.png?v=2">
+  <link rel="apple-touch-icon" href="static/images/icon.png?v=2">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "FlowInOne: Unifying Multimodal Generation as Image-in, Image-out Flow Matching",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {"@type": "Person", "name": "Junchao Yi", "affiliation": {"@type": "Organization", "name": "University of Electronic Science and Technology of China"}},
+      {"@type": "Person", "name": "Rui Zhao", "affiliation": {"@type": "Organization", "name": "National University of Singapore"}},
+      {"@type": "Person", "name": "Jiahao Tang", "affiliation": {"@type": "Organization", "name": "Central South University"}},
+      {"@type": "Person", "name": "Weixian Lei", "affiliation": {"@type": "Organization", "name": "Tencent"}},
+      {"@type": "Person", "name": "Linjie Li", "affiliation": {"@type": "Organization", "name": "Microsoft"}},
+      {"@type": "Person", "name": "Qisheng Su", "affiliation": {"@type": "Organization", "name": "University of Science and Technology of China"}},
+      {"@type": "Person", "name": "Zhengyuan Yang", "affiliation": {"@type": "Organization", "name": "Microsoft"}},
+      {"@type": "Person", "name": "Lijuan Wang", "affiliation": {"@type": "Organization", "name": "Microsoft"}},
+      {"@type": "Person", "name": "Xiaofeng Zhu", "affiliation": {"@type": "Organization", "name": "University of Electronic Science and Technology of China"}},
+      {"@type": "Person", "name": "Alex Jinpeng Wang", "affiliation": {"@type": "Organization", "name": "Central South University"}}
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/icon.png?v=2",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <nav class="section-quick-nav" id="sectionQuickNav" aria-label="Quick navigation on this page">
+    <ul class="section-quick-nav__list">
+      <li><a class="section-quick-nav__link" href="#intro">Intro</a></li>
+      <li><a class="section-quick-nav__link" href="#abstract">Abstract</a></li>
+      <li><a class="section-quick-nav__link" href="#qualitative-results">Demos</a></li>
+      <li><a class="section-quick-nav__link" href="#dataset">Dataset</a></li>
+      <li><a class="section-quick-nav__link" href="#method">Method</a></li>
+      <li><a class="section-quick-nav__link" href="#visual-comparison">Compare</a></li>
+      <li><a class="section-quick-nav__link" href="#benchmark">Benchmark</a></li>
+      <li><a class="section-quick-nav__link" href="#vp-bench-results">Results</a></li>
+      <li><a class="section-quick-nav__link" href="#BibTeX">BibTeX</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+  <section class="hero hero-landing" id="intro">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="landing-stack">
+          <div class="landing-more-research" role="navigation" aria-label="Related research">
+            <div class="landing-more-research__pills">
+              <span class="landing-more-research__pill landing-more-research__pill--label">More Research:</span>
+              <a
+                class="landing-more-research__pill landing-more-research__pill--link"
+                href="https://csu-jpg.github.io/MVPBench/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                <span>MVPBench</span>
+              </a>
+            </div>
+          </div>
+          <div class="landing-brand-row">
+            <img
+              class="landing-brand-icon"
+              src="static/images/flowinone.png"
+              alt=""
+              decoding="async"
+            >
+            <h1 class="landing-brand-name">FlowInOne</h1>
+          </div>
+          <h2 class="landing-headline">Unifying Multimodal Generation as Image-in, Image-out Flow Matching</h2>
+
+          <div class="landing-byline">
+            <div class="landing-authors-block">
+              <p class="landing-authors-row"><a href="https://github.com/Junc1i" target="_blank" rel="noopener noreferrer">Junchao Yi</a><sup>1*</sup>, <a href="https://ruizhaocv.github.io/" target="_blank" rel="noopener noreferrer">Rui Zhao</a><sup>3*</sup>, <a href="https://github.com/accebet" target="_blank" rel="noopener noreferrer">Jiahao Tang</a><sup>2*</sup>, <a href="https://scholar.google.com/citations?hl=en&amp;user=b2pGch8AAAAJ" target="_blank" rel="noopener noreferrer">Weixian Lei</a><sup>5</sup>, <a href="https://scholar.google.com/citations?user=WR875gYAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Linjie Li</a><sup>6</sup></p>
+              <p class="landing-authors-row"><a href="https://github.com/sqs-ustc/" target="_blank" rel="noopener noreferrer">Qisheng Su</a><sup>4</sup>, <a href="https://zyang-ur.github.io/" target="_blank" rel="noopener noreferrer">Zhengyuan Yang</a><sup>6</sup>, <a href="https://www.microsoft.com/en-us/research/people/lijuanw/" target="_blank" rel="noopener noreferrer">Lijuan Wang</a><sup>6</sup>, <a href="https://scholar.google.com/citations?hl=en&amp;user=-bk1CrcAAAAJ" target="_blank" rel="noopener noreferrer">Xiaofeng Zhu</a><sup>1†</sup>, <a href="https://fingerrec.github.io/" target="_blank" rel="noopener noreferrer">Alex Jinpeng Wang</a><sup>2†</sup></p>
+            </div>
+            <div class="landing-affils">
+              <p class="landing-affil-line"><sup>1</sup> University of Electronic Science and Technology of China, <sup>2</sup> Central South University</p>
+              <p class="landing-affil-line"><sup>3</sup> National University of Singapore, <sup>4</sup> University of Science and Technology of China, <sup>5</sup> Tencent, <sup>6</sup> Microsoft</p>
+            </div>
+            <p class="landing-meta-note"><sup>*</sup> Equal contribution. <sup>†</sup> Corresponding author.</p>
+          </div>
+
+          <div class="landing-actions">
+            <div class="landing-btn-row">
+              <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" class="landing-btn-secondary" target="_blank" rel="noopener">
+                <i class="ai ai-arxiv" aria-hidden="true"></i> Paper
+              </a>
+              <a href="https://github.com/CSU-JPG/FlowInOne" class="landing-btn-secondary" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> Code
+              </a>
+              <a href="https://huggingface.co/CSU-JPG/FlowInOne" class="landing-btn-secondary" target="_blank" rel="noopener">
+                <span class="landing-icon-hf" aria-hidden="true"></span> Model
+              </a>
+              <a href="https://huggingface.co/datasets/CSU-JPG/VisPrompt5M" class="landing-btn-secondary" target="_blank" rel="noopener">
+                <span class="landing-icon-hf" aria-hidden="true"></span> VisPrompt-5M
+              </a>
+              <a href="https://huggingface.co/datasets/CSU-JPG/VPBench" class="landing-btn-secondary" target="_blank" rel="noopener">
+                <span class="landing-icon-hf" aria-hidden="true"></span> VP-Bench
+              </a>
+            </div>
+          </div>
+
+          <figure class="landing-paradigm-compare">
+            <button
+              type="button"
+              class="landing-paradigm-trigger"
+              id="teaserLightboxTrigger"
+              aria-label="Open enlarged comparison of generation paradigms"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              aria-controls="teaserLightbox"
+            >
+              <span class="landing-paradigm-frame">
+                <img
+                  class="landing-teaser-img"
+                  src="static/images/teaser.png"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                >
+              </span>
+              <span class="landing-paradigm-zoom-hint" aria-hidden="true">
+                <i class="fas fa-search-plus"></i> Click to enlarge
+              </span>
+            </button>
+            <figcaption class="landing-paradigm-caption"><b>Comparison of generation paradigms</b>. We
+              unify the conditions as visual input and form a simple <b>image-in, image-out</b> framework with a single model.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light paper-abstract-section" id="abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 paper-abstract-title">Abstract</h2>
+        <div class="content has-text-justified paper-abstract">
+          <p>
+            Multimodal generation has long been dominated by text-driven pipelines where language dictates vision but cannot reason or create within it.
+            We challenge this paradigm by asking whether all modalities, including textual descriptions, spatial layouts, and editing instructions, can be unified into a single visual representation.
+            We present <strong class="abstract-key">FlowInOne</strong>, a framework that reformulates multimodal generation as a <strong class="abstract-key">purely visual flow</strong>, converting all inputs into visual prompts and enabling a clean <strong class="abstract-key">image-in, image-out</strong> pipeline governed by a <strong class="abstract-key">single flow matching model</strong>.
+            This <strong class="abstract-key">vision-centric</strong> formulation naturally eliminates cross-modal alignment bottlenecks, noise scheduling, and task-specific architectural branches, unifying text-to-image generation, layout-guided editing, and visual instruction following under one coherent paradigm.
+            To support this, we introduce <strong class="abstract-key">VisPrompt-5M</strong>, a large-scale dataset of <strong class="abstract-key">5 million</strong> visual prompt pairs spanning diverse tasks including physics-aware force dynamics and trajectory prediction, alongside <strong class="abstract-key">VP-Bench</strong>, a rigorously curated benchmark assessing instruction faithfulness, spatial precision, visual realism, and content consistency.
+            Extensive experiments demonstrate that FlowInOne achieves <strong class="abstract-key">state-of-the-art</strong> performance across all unified generation tasks, surpassing both open-source models and competitive commercial systems, establishing a new foundation for fully vision-centric generative modeling where perception and creation coexist within a single continuous visual space.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Visual Demos: input/output pairs (cards injected by index.js) -->
+<section class="section hero is-small qual-results-section" id="qualitative-results">
+  <div class="container is-max-fullhd">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Visual Demos</h2>
+        <div class="content has-text-justified qual-results-intro">
+          <p>
+            FlowInOne unifies multiple generation settings. Each tile shows <strong>input</strong> (left) and <strong>output</strong> (right). Click to open a viewer with a <strong>drag slider</strong> to compare.
+          </p>
+        </div>
+        <div class="qual-results-grid" id="qualResultsGrid" aria-label="Visual Demos: input and output pairs"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Visual Demos -->
+
+<!-- VisPrompt dataset -->
+<section class="section hero is-small dataset-section" id="dataset">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">VisPrompt Dataset</h2>
+        <figure class="dataset-figure">
+          <img
+            src="static/images/dataset.png"
+            alt="VisPrompt dataset overview: eight data types spanning class-to-image, text-to-image, editing, and physics-aware tasks."
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+        <div class="content has-text-justified dataset-intro">
+          <p>
+            <strong>VisPrompt</strong> is a comprehensive dataset that comprises eight distinct data types, including class-to-image generation, text-to-image generation, text-in-image editing, text bounding box editing, visual marker editing, doodles editing, force understanding, and trajectory understanding. <strong>The dataset covers a wide spectrum of image-to-image generation, ranging from basic text-in-image generation to compositional editing, and further to physics-aware instruction following.</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End VisPrompt dataset -->
+
+<!-- FlowInOne method / architecture -->
+<section class="section hero is-small model-section" id="method">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+        <figure class="model-figure">
+          <img
+            src="static/images/model_arch.png"
+            alt="FlowInOne architecture: dual-path spatially-adaptive modulation with Flow Matching in a single visual modality."
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+        <div class="content has-text-justified model-intro">
+          <p>
+            <strong>Overview of the FlowInOne architecture, a general and simple framework using Flow Matching for continuous evolution in only one modality.</strong>
+            FlowInOne employs a Dual-Path Spatially-Adaptive Modulation to adapt computation by modality. For input image rendering with only text, the structural branch is bypassed to strictly follow semantic evolution. Conversely, for image editing, a spatially-adaptive gated network and cross attention activates to selectively inject source priors, dynamically balancing original image preservation with instruction-driven reconstruction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End method -->
+
+<!-- Visual comparison across methods -->
+<section class="section hero is-small vis-comp-section" id="visual-comparison">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">Visual instruction generation comparison across methods</h2>
+        <figure class="vis-comp-figure">
+          <button
+            type="button"
+            class="vis-comp-zoom bench-pair-zoom"
+            data-full-src="static/images/vis_comp.png"
+            data-full-alt="Visual instruction generation results compared across different methods."
+            aria-label="Enlarge visual comparison across methods"
+          >
+            <img
+              src="static/images/vis_comp.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+          </button>
+          <figcaption class="vis-comp-caption">
+            <span class="bench-zoom-hint">Click image to enlarge.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End visual comparison -->
+
+<!-- Benchmark & evaluation -->
+<section class="section hero is-small bench-section" id="benchmark">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">Benchmark &amp; Evaluation</h2>
+        <div class="content has-text-justified bench-intro">
+          <p>
+            We evaluate visual instruction following using a VLM-based pipeline, which takes three inputs: the source image (Case A: text-only canvas; Case B: annotated real images), the generated output, and the text instruction extracted directly from the source image. This explicitly provided text prevents evaluation errors that could occur if the evaluating VLM fails to accurately understand the instruction from the visual input.
+          </p>
+          <p>
+            Each sample is evaluated on a 1-to-5 scale across four criteria—<strong>instruction fidelity, content consistency, visual realism, and spatial precision</strong>—yielding a final outcome of PASS or FAIL.
+          </p>
+        </div>
+        <div class="bench-figures-row" role="group" aria-label="Benchmark data distribution and evaluation pipeline">
+          <figure class="bench-pair-figure bench-pair-figure--stat">
+            <button
+              type="button"
+              class="bench-pair-frame bench-pair-frame--stat bench-pair-zoom"
+              data-full-src="static/images/bench_statistics.png"
+              data-full-alt="Data distribution across the eight subsets of VP-Bench."
+              aria-label="Enlarge VP-Bench data distribution chart"
+            >
+              <img
+                src="static/images/bench_statistics.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              >
+            </button>
+            <figcaption class="bench-pair-caption">
+              <span class="bench-zoom-hint">Click image to enlarge.</span>
+              Data distribution across the eight distinct subsets within <strong>VP-Bench</strong>. <strong>VP-Bench</strong> is a comprehensive benchmark that comprises eight distinct data types.
+            </figcaption>
+          </figure>
+          <figure class="bench-pair-figure bench-pair-figure--eval">
+            <button
+              type="button"
+              class="bench-pair-frame bench-pair-frame--eval bench-pair-zoom"
+              data-full-src="static/images/eval_process.png"
+              data-full-alt="VLM evaluation pipeline: source image, generated output, and text instruction as inputs."
+              aria-label="Enlarge evaluation pipeline figure"
+            >
+              <img
+                src="static/images/eval_process.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              >
+            </button>
+            <figcaption class="bench-pair-caption">
+              <span class="bench-zoom-hint">Click image to enlarge.</span>
+              Evaluation pipeline driven by VLMs: three inputs (source image by case, generated image, instruction text) and structured scoring leading to a final verdict.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End benchmark -->
+
+<!-- VP-Bench quantitative results (custom layout, not paper figure) -->
+<section class="section hero is-small vp-results-section" id="vp-bench-results" aria-labelledby="vp-bench-results-heading">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered" id="vp-bench-results-heading">VP-Bench results</h2>
+        <div class="content has-text-justified vp-results-intro">
+          <p>
+            Success ratios on the <strong>VP-Bench</strong> visual-instruction benchmark under four evaluator: three SOTA VLMs (<strong>GPT‑5.2</strong>, <strong>Gemini&nbsp;3</strong>, <strong>Qwen3.5</strong>) and <strong>human</strong>.
+            <strong>Total</strong> is the average success rate across all eight task categories. <strong>Bold</strong> numbers are the highest success rate in that column among all listed methods (ties are both bold).
+          </p>
+        </div>
+        <p class="vp-results-abbr" role="note">
+          <strong>Abbrev.</strong>
+          C2I: class-to-image · T2I: text-to-image · TIE: text-in-image edit · FU: force understanding · TBE: text &amp; bbox edit · TU: trajectory understanding · VME: visual marker edit · DE: doodles edit
+        </p>
+        <div id="vpBenchResultsRoot" class="vp-bench-mount"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End VP-Bench results -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
+  title={Your Paper Title Here},
+  author={First Author and Second Author and Third Author},
+  journal={Conference/Journal Name},
+  year={2024},
+  url={https://your-domain.com/your-project-page}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <div class="bench-lightbox" id="benchLightbox" role="dialog" aria-modal="true" aria-label="Enlarged benchmark figure" hidden>
+    <div class="bench-lightbox-backdrop" data-bench-lightbox-close tabindex="-1"></div>
+    <div class="bench-lightbox-panel">
+      <button type="button" class="bench-lightbox-close" aria-label="Close enlarged figure" data-bench-lightbox-close>
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      <img class="bench-lightbox-img" id="benchLightboxImg" src="" alt="">
+    </div>
+  </div>
+
+  <div class="teaser-lightbox" id="teaserLightbox" role="dialog" aria-modal="true" aria-labelledby="teaserLightboxTitle" hidden>
+    <div class="teaser-lightbox-backdrop" data-teaser-lightbox-close tabindex="-1"></div>
+    <div class="teaser-lightbox-panel">
+      <p id="teaserLightboxTitle" class="sr-only">Comparison of generation paradigms — full size</p>
+      <button type="button" class="teaser-lightbox-close" aria-label="Close enlarged image">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      <img
+        class="teaser-lightbox-img"
+        src="static/images/teaser.png"
+        alt="Comparison of generation paradigms: text-to-image, text-image-to-image, and FlowInOne image-in-image-out."
+      >
+    </div>
+  </div>
+
+  <div class="qual-compare-lightbox" id="qualCompareLightbox" role="dialog" aria-modal="true" aria-labelledby="qualCompareTitle" hidden>
+    <div class="qual-compare-backdrop" data-qual-compare-close tabindex="-1"></div>
+    <div class="qual-compare-modal" tabindex="-1">
+      <button type="button" class="qual-compare-close" aria-label="Close comparison" data-qual-compare-close>
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      <h3 class="qual-compare-title" id="qualCompareTitle"></h3>
+      <p class="qual-compare-sub">drag divider or use ← →</p>
+      <div class="qual-compare-stage">
+        <div class="qual-compare-viewport" id="qualCompareViewport">
+          <img class="qual-compare-base" id="qualCompareOutputImg" src="" alt="Output">
+          <div class="qual-compare-clip" id="qualCompareClip">
+            <div class="qual-compare-clip-inner">
+              <img class="qual-compare-overlay-img" id="qualCompareInputImg" src="" alt="Input">
+            </div>
+          </div>
+          <div
+            class="qual-compare-handle"
+            id="qualCompareHandle"
+            role="slider"
+            tabindex="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="50"
+            aria-label="Drag to compare input and output"
+          >
+            <span class="qual-compare-handle-line" aria-hidden="true"></span>
+            <span class="qual-compare-handle-grip" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="qual-compare-legend">
+          <span class="qual-compare-legend-in">Input</span>
+          <span class="qual-compare-legend-out">Output</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
