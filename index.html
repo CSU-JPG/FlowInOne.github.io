@@ -384,7 +384,7 @@
   <div class="container is-max-widescreen">
     <div class="columns is-centered">
       <div class="column is-full">
-        <h2 class="title is-3 has-text-centered">Visual instruction generation comparison across methods</h2>
+        <h2 class="title is-3 has-text-centered">Comparison of visual instruction generation across methods</h2>
         <figure class="vis-comp-figure">
           <button
             type="button"
@@ -419,9 +419,10 @@
         <div class="content has-text-justified bench-intro">
           <p>
             We evaluate visual instruction following using a VLM-based pipeline, which takes three inputs: the source image (Case A: text-only canvas; Case B: annotated real images), the generated output, and the text instruction extracted directly from the source image. This explicitly provided text prevents evaluation errors that could occur if the evaluating VLM fails to accurately understand the instruction from the visual input.
+            Each sample is evaluated on a 1-to-5 scale across four criteria—<strong>instruction fidelity, content consistency, visual realism, and spatial precision</strong>—yielding a final outcome of PASS or FAIL.
           </p>
           <p>
-            Each sample is evaluated on a 1-to-5 scale across four criteria—<strong>instruction fidelity, content consistency, visual realism, and spatial precision</strong>—yielding a final outcome of PASS or FAIL.
+            To complement this rubric and more thoroughly capture visual quality and editing accuracy, we <strong>additionally define four quantitative metrics</strong> tailored to our evaluation paradigm; see the paper for full definitions and formulations.
           </p>
         </div>
         <div class="bench-figures-row" role="group" aria-label="Benchmark data distribution and evaluation pipeline">
